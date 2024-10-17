@@ -1,0 +1,103 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #141414;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #141414;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+}
+
+nav h2 {
+    font-size: 24px;
+    color: #e50914;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #e50914;
+}
+
+nav input {
+    padding: 8px;
+    width: 200px;
+    border: none;
+    border-radius: 4px;
+}
+
+/* sessão filmes */
+#featured {
+    padding: 80px 50px 20px 50px;
+}
+
+#featured h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* filmes container */
+#movies-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+}
+
+.movie {
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.movie:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.movie img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.movie h3 {
+    font-size: 16px;
+    margin: 10px 0 5px;
+    text-align: center;
+}
+
+.movie p {
+    font-size: 14px;
+    text-align: center;
+    color: #b3b3b3;
+}
+
+/* Hover effect for movie info */
+.movie:hover h3, .movie:hover p {
+    color: #e50914;
+}
+
